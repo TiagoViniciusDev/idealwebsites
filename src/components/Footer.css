@@ -1,0 +1,98 @@
+.Footer{
+    padding: 2em 4em;
+    display: flex;
+    gap: 20%;
+    justify-content: space-between;
+
+    background-color: var(--backgroundColor);
+    border: 5px solid var(--cor-principal);
+}
+
+.Footer .contact1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Footer .contact1 .profile .logo{
+    width: 3em;
+    height: 3em;
+    background-image: url(../../public/IdealWebSitesLogo.webp);
+    background-size: cover;
+    border-radius: 100%;
+    margin-bottom: 0.2em;
+}
+
+.Footer .contact1 .profile .profileText h2 span{
+    color: var(--cor-principal);
+}
+
+.Footer .contact1 .profile .profileText p{
+    color: rgb(100,100,100);
+}
+
+.Footer .contact1 .email{
+    margin-top: 2em;
+}
+
+.Footer .contact1 .email p{
+    color: rgb(100,100,100);
+    margin-bottom: 0.2em;
+}
+
+.Footer .contact2{
+    max-width: 40%;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Footer .contact2 .contactIcons{
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+}
+
+.Footer .contact2 .contactIcons svg{
+    font-size: 2.2em;
+    color: black;
+}
+
+.Footer .contact2 .contactIcons svg:hover{
+    color: var(--cor-principal);
+    margin-top: -4px;
+}
+
+@media screen and (max-width: 680px){
+    .Footer{
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Footer .contact1 .profile .logo{
+        width: 6em;
+        height: 6em;
+        margin: 0 auto;
+        margin-bottom: 1.5em;
+    }
+
+    .Footer .contact2{
+        max-width: none;
+    }
+
+    .Footer .contact2 h1{
+        font-size: 1.6em;
+    }
+
+    .Footer .contact2 .contactIcons{
+        margin: 0 auto;
+        margin-top: 1em;
+    }
+
+    .Footer .contact2 .contactIcons svg{
+        font-size: 3em;
+    }
+}

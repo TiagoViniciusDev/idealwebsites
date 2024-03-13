@@ -1,0 +1,91 @@
+.DestaqueContainer{
+    text-align: center;
+}
+
+.DestaqueContainer > h2{
+    margin-bottom: 1em;
+}
+
+.DestaqueContainer .container2{
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    align-items: center;
+    height: 20em;
+}
+
+.DestaqueContainer .slide{
+    text-align: center;
+    border: 1px solid black;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.DestaqueContainer .slide:hover{
+    margin-top: -7px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.DestaqueContainer .slide p{
+    margin-top: 0.5em;
+}
+
+.DestaqueContainer .slide .img{
+    width: 5em;
+    height: 5em;
+    background-size: cover;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+.DestaqueContainer .slide .img1{
+    background-image: url(../../public/coin_1.webp);
+}
+
+.DestaqueContainer .slide .img2{
+    background-image: url(../../public/segurança.webp);
+}
+
+.DestaqueContainer .slide .img3{
+    background-image: url(../../public/acompanhamento-personalizado.webp);
+}
+
+.DestaqueContainer .slide .img4{
+    background-image: url(../../public/Experiência.webp);
+}
+
+
+@media screen and (max-width: 1280px){
+    .DestaqueContainer .container2{
+        flex-wrap: wrap;
+        height: 35em;
+        width: 40em;
+    }
+
+    .DestaqueContainer .slide{
+        height: 50%;
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 564px){
+    .DestaqueContainer .container2{
+        width: auto;
+        height: auto;
+    }
+
+    .DestaqueContainer .slide{
+        height: auto;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .DestaqueContainer .slide:hover{
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,132 @@
+.Header{
+    padding: 1em 0;
+    background-color: rgba(255,255,255,0.7);
+    position: fixed;
+    width: 100%;
+}
+
+.Header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Header .logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Header .logo .logoImg{
+    width: 4em;
+    height: 4em;
+    background-image: url(../../public/IdealWebSitesLogo.webp);
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.Header .logo h2 span{
+    color: var(--cor-principal);
+}
+
+.Header nav{
+    display: flex;
+    gap: 0.5em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.Header nav p{
+    color: black;
+    padding: 0.2em 0.4em;
+    cursor: pointer;
+}
+
+.Header nav p:hover{
+   color: var(--cor-principal);
+}
+
+.Header .contact{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: #00A884;
+    padding: 0.5em 1em;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Header .contact:hover{
+    color: black;
+}
+
+.Header .contact svg{
+    font-size: 1.5em;
+}
+
+.mobile{
+    display: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.mobile svg{
+    font-size: 2em;
+    color: var(--cor-principal);
+}
+
+.mobile .mobileContainer{
+    width: 96%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    
+    padding: 0 1em;
+    background-color: white;
+    border: 1px solid black;
+    transition: 1s;
+}
+
+.mobile .mobileContainer .navMobile{
+    transition: 1s;
+    opacity: 1;
+}
+
+
+.mobile .mobileContainer .navMobile nav{
+    display: block;
+}
+
+.mobile .navMobile nav p{
+    color: white;
+    padding: 0.5em 1em;
+    display: block;
+    color: black;
+}
+
+.mobile .navMobile nav p:hover{
+    color: var(--cor-principal);
+ }
+
+.mobile .navMobile nav p:nth-of-type(2){
+    border-top: 1px solid var(--cor-principal);
+    border-bottom: 1px solid var(--cor-principal);
+}
+
+
+
+@media screen and (max-width: 764px){
+    .Header nav{
+        display: none;
+    }
+
+    .Header .contact{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+}

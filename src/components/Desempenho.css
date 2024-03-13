@@ -1,0 +1,99 @@
+.Desempenho{
+    width: 100%;
+}
+
+.Desempenho .flexContainer{
+    min-height: 30em;
+    padding-bottom: 3em;
+    display: flex;
+    
+    justify-content: right;
+    gap: 1em;
+    background-image: url(../../public/DesempenhoDados_1.webp);
+    background-size: cover;
+    background-position: left;
+}
+
+.Desempenho .flexContainer .section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 45%;
+    text-align: right;
+}
+
+.Desempenho .flexContainer .section1 .text h2{
+    margin-bottom: 0.5em;
+}
+
+.Desempenho .flexContainer .section1 .text span{
+    color: #025D7E;
+    font-weight: bold;
+}
+
+.Desempenho .flexContainer .section1 .valoresDesempenho{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 2em;
+    justify-content: right;
+}
+
+.Desempenho .flexContainer .section1 .valoresDesempenho .valoresContainer{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+    justify-content: right;
+}
+
+.Desempenho .flexContainer .section1 .valoresDesempenho .valoresContainer .circle{
+    width: 10em;
+    height: 10em;
+}
+
+@media screen and (max-width: 900px){
+    .Desempenho .flexContainer{
+        background-position: center;
+    }
+
+    .Desempenho .flexContainer .section1 .valoresDesempenho{
+        gap: 1em;
+    }
+
+
+    .Desempenho .flexContainer .section1 .valoresDesempenho .valoresContainer{
+        gap: 1em;
+    }
+
+    .Desempenho .flexContainer .section1 .valoresDesempenho .valoresContainer .circle{
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 764px){
+    .Desempenho .flexContainer{
+        background-position: -15em;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 464px){
+    .Desempenho .flexContainer{
+        background-image: none;
+    }
+
+    .Desempenho .flexContainer .section1{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .Desempenho .flexContainer .section1 .valoresDesempenho{
+        justify-content: space-around;
+    }
+
+    .Desempenho .flexContainer .section1 .valoresDesempenho .valoresContainer{
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,10 @@
+.Sobre{
+    text-align: center;
+}
+
+.Sobre > .container2 > a{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 1em;
+}

@@ -1,0 +1,45 @@
+.Main{
+    background-image: url(../../public/Idealwebsites-Banner1.webp);
+    background-position: right;
+    background-size: cover;
+    padding-top: 4em;
+    background-repeat: no-repeat;
+}
+
+.Main .mainText{
+    padding: 10em 0;
+    width: fit-content;
+    max-width: 50%;
+}
+
+.Main .mainText .destaque{
+    color: var(--cor-principal);
+}
+
+.Main .mainText p{
+ margin-top: 0.5em;
+}
+
+.Main .mainText a{
+    display: block;
+    width: fit-content;
+    margin-top: 0.5em;
+}
+
+
+@media screen and (max-width: 864px){
+    .Main{
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 564px){
+  .Main{
+    background-image: none;
+  }
+
+  .Main .mainText{
+    padding: 5em 1em;
+    max-width: 80%;
+  }
+}
