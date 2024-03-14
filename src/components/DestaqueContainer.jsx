@@ -22,7 +22,7 @@ function DestaqueContainer() {
                 <div className='img img1'></div>
                 <h3>Preços</h3>
                 <h3>acessíveis</h3>
-                <p>Sites com preços a partir de 100 reais. Custo beneficio garantido</p>
+                <p>Sites com preços acessíveis. Custo beneficio garantido</p>
             </div>
             <div className='slide'>
                 <div className='img img2'></div>
