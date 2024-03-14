@@ -7,4 +7,17 @@
     width: fit-content;
     margin: 0 auto;
     margin-top: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em 2em;
+}
+
+.Sobre > .container2 > a:hover > svg{
+    color: white;
+}
+
+.Sobre > .container2 > a svg{
+    font-size: 2em;
+    color: #00A884;
 }
