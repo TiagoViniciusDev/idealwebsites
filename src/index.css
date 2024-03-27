@@ -12,6 +12,10 @@
   --backgroundColor: rgb(230,230,230);
 }
 
+body{
+  background-color: white;
+}
+
 a{
   text-decoration: none;
 }
