@@ -4,7 +4,7 @@ import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 //Context
 import { useContext } from 'react';
@@ -16,9 +16,22 @@ function Header() {
 
   const [showMobile, setShowMobile] = useState(false)
 
-  function toggleMenuMobile(){
-    setShowMobile(!showMobile)
-  }
+
+  //Sistema Janela Modal
+  useEffect(() => {
+      document.getElementById('NavMobile').addEventListener('click', function(){
+          setShowMobile(false)
+      })
+
+      document.getElementById('ShowNav').addEventListener('click', function(e){
+          setShowMobile(true)
+          e.stopPropagation()
+      })
+
+      window.addEventListener('click', function(){
+          setShowMobile(false)
+      })
+  },[])
 
   return (
     <div className='Header'>
@@ -37,12 +50,14 @@ function Header() {
               <h3>(86) 99565-2410</h3>
             </a>
             <div className='mobile'>
-              <div className='showNav'>
-                <IoMenu style={showMobile ? {"display": "none"} : {"display": "block"}}  onClick={() => {toggleMenuMobile()}}/>
-                <IoClose style={showMobile ? {"display": "block"} : {"display": "none"}}  onClick={() => {setShowMobile(false)}}/>
+              <div className='showNav' id='ShowNav'>
+                <IoMenu onClick={() => {setShowMobile(true)}}/>
               </div>
-              <div className='mobileContainer' style={showMobile ? {"display": "block"} : {"opacity": "0", "display": "none"}}>
-                <div className='navMobile'>
+              <div className='mobileContainer' style={showMobile ? {"display": "flex"} : {"opacity": "0", "display": "none"}}>
+                <div className='closeButton' onClick={() => {setShowMobile(false)}}>
+                  <IoClose />
+                </div>
+                <div className='navMobile' id='NavMobile'>
                   <nav onClick={() => {setShowMobile(false)}}>
                     <p onClick={() => {goHome()}}>Home</p>
                     <p onClick={() => {goServices()}}>Serviços</p>

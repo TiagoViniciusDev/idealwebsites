@@ -79,6 +79,7 @@
 .mobile .mobileContainer{
     width: 96%;
     position: absolute;
+    top: 1em;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -87,9 +88,23 @@
     background-color: white;
     border: 1px solid black;
     transition: 1s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.mobile .mobileContainer .closeButton{
+    text-align: right;
+    margin-top: 0.5em;
+}
+
+.mobile .mobileContainer .closeButton:hover > svg{
+    color: darkred;
 }
 
 .mobile .mobileContainer .navMobile{
+    width: 100%;
     transition: 1s;
     opacity: 1;
 }
@@ -101,9 +116,10 @@
 
 .mobile .navMobile nav p{
     color: white;
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     display: block;
     color: black;
+    font-weight: 700;
 }
 
 .mobile .navMobile nav p:hover{
@@ -115,7 +131,9 @@
     border-bottom: 1px solid var(--cor-principal);
 }
 
-
+.mobile .navMobile nav p:last-of-type{
+   margin-bottom: 1em;
+}
 
 @media screen and (max-width: 764px){
     .Header nav{
